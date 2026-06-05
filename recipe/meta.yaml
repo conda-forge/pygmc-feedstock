@@ -1,5 +1,5 @@
 {% set name = "pygmc" %}
-{% set version = "0.14.1" %}
+{% set version = "0.14.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pygmc-{{ version }}.tar.gz
-  sha256: 27b78cd1f23e9475874e6f5096910437e38ed50894e164e2ef3d529eba6b4a05
+  sha256: 502a86cac43ea4d2247eb0fe1b54773c99232eb473b9d5f918cbffd012821fe5
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
